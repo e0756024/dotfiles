@@ -105,3 +105,6 @@ alias k='kubectl'
 alias kp='kubectl get pods -o wide'
 alias kdp='kubectl describe pod'
 alias kdn='kubectl describe node'
+
+# dropbox study folder
+alias uni="cd ~/Dropbox/Uni/MSC/2018S"
