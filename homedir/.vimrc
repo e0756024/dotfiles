@@ -1,8 +1,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Must Have
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" solarized options
 colorscheme solarized
-" syntax on " syntax highlighting on
+syntax on " syntax highlighting on
 syntax enable
 let g:solarized_termtrans = 1
 call togglebg#map("<F5>")
@@ -50,7 +51,7 @@ Plugin 'millermedeiros/vim-esformatter'
 Plugin 'digitaltoad/vim-pug'
 " Plugin 'elzr/vim-json'
 " Plugin 'SirVer/ultisnips'
-"Plugin 'sheerun/vim-polyglot'
+" Plugin 'sheerun/vim-polyglot'
 " plugins from http://vim-scripts.org/vim/scripts.html
 Plugin 'node.js'
 Plugin 'SuperTab'
@@ -68,6 +69,10 @@ Plugin 'SuperTab'
 " Plugin 'leafgarland/typescript-vim'
 " Vue.js
 Plugin 'posva/vim-vue'
+" Soldity
+Plugin 'tomlion/vim-solidity'
+" Soldity Compiler Plugin
+Plugin 'dmdque/solidity.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -243,7 +248,9 @@ endfunction
 " map <right> <ESC>:Tlist<RETURN> " show taglist
 " map <left> <ESC>:NERDTreeToggle<RETURN>  " moves left fa split
 " map <F2> <ESC>ggVG:call SuperRetab()<left>
-" map <F12> ggVGg? " apply rot13 for people snooping over shoulder, good fun
+map <F12> ggVGg? " apply rot13 for people snooping over shoulder, good fun
+map <C-l> :tabn<CR>
+map <C-l> :tabp<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Useful abbrevs
@@ -334,6 +341,14 @@ let g:syntastic_enable_tslint_checker = 1
 "let g:syntastic_typescript_checkers = ['tslint', 'tsc']
 let g:syntastic_enable_pug_checker = 1
 let g:syntastic_pug_checkers = ['jade','pug']
+let g:syntastic_soldity_checker = ['solhint', 'solc']
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Soldity Copiler Plugin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup quickfix
+  autocmd!
+  autocmd QuickFixCmdPost make nested copen
+augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Other
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
