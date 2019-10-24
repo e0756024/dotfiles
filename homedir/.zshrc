@@ -50,5 +50,8 @@ load-nvmrc
 # Customize to your needs...
 unsetopt correct
 
+# pdftex
+export PATH=“/Library/TeX/texbin/:$PATH”
+
 # run fortune on new terminal :)
 # fortune

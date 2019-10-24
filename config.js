@@ -60,7 +60,7 @@ module.exports = {
     'docker', // docker for mac
     'dropbox',
     //'evernote',
-    'flux',
+    //'flux',
     'gpg-suite',
     //'ireadfast',
     'iterm2',
@@ -69,15 +69,17 @@ module.exports = {
     //'micro-snitch',
     //'signal',
     //'macvim',
-    'sizeup',
+    //'sizeup',
     //'sketchup',
-    'slack',
+    //'slack',
     'the-unarchiver',
     //'torbrowser',
     //'visual-studio-code',
     'transmission',
     //'vlc',
-    'xquartz'
+    //'xquartz',
+    'tunnelblick',
+    'spectacle'
   ],
   gem: [
   ],
